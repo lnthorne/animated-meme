@@ -22,6 +22,27 @@ func main() {
 	} else {
 		fmt.Printf("The result of the integer division is %v with a remainder of %v", value2, remainder2)
 	}
+
+	// switch will also do pattern matching 
+	// Note: the break is implied
+	switch {
+	case err != nil:
+		fmt.Printf(err.Error())
+	case remainder == 0:
+		fmt.Printf("The result of the integer divison is %v", result)
+	default:
+		fmt.Printf("The result of the integer division is %v with a remainder of %v", result, remainder)
+	}
+
+	// This is a conditonal switch, more of what we are used to 
+	switch remainder {
+	case 0:
+		fmt.Printf("The division was exact")
+	case 1,2:
+		fmt.Printf("This measn either 1 OR 2")
+	default: 
+		fmt.Printf("Default case")
+	}
 }
 
 func printMe(value string) {
